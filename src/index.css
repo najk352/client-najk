@@ -1,0 +1,153 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex; /* Make body a flex container to push footer to bottom */
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body takes full viewport height */
+}
+
+#root {
+  flex: 1; /* Allow #root to grow and take available space */
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Ensure main content area grows */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Custom styles for the app components and sections */
+
+/* Header / Navbar specific styles (if needed beyond Bootstrap defaults) */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar .nav-link {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8) !important; /* Adjust if primary color makes text hard to read */
+}
+.navbar .nav-link:hover {
+  color: white !important;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 100px 0;
+  background-color: #e2f0fb; /* Light blue background as specified */
+  text-align: center;
+  /* You can add a background image here if desired */
+  /* background-image: url('../assets/hero-bg.jpg'); */
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* color: #333; */
+}
+.hero-section h1 {
+  color: #212529; /* Dark text for contrast */
+}
+
+/* About Us, Partners, FAQ sections general padding */
+.about-section,
+.partners-section,
+.faq-section {
+  padding: 60px 0;
+}
+
+/* Goal, Mission, Vision Cards */
+.py-5.bg-light .card {
+  border: none;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+.py-5.bg-light .card:hover {
+  transform: translateY(-5px);
+}
+.py-5.bg-light .card-title {
+  color: #007bff; /* Primary color for titles */
+}
+
+
+/* Footer specific styles */
+.footer {
+  background-color: #f8f9fa; /* Light background for footer */
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #e9ecef;
+  margin-top: auto; /* Push footer to the bottom */
+}
+.footer a {
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Application Multi-Step Form Specific Styles */
+.application-wizard .card-header {
+  font-weight: bold;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+.application-wizard .step-indicator {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 10px;
+}
+.application-wizard .step-indicator span {
+  padding: 10px 15px;
+  border-bottom: 3px solid transparent; /* default state */
+  cursor: pointer;
+  font-weight: bold;
+  color: #6c757d; /* muted text */
+  transition: all 0.3s ease;
+}
+.application-wizard .step-indicator span.active {
+  border-color: #007bff; /* primary color for active step */
+  color: #007bff;
+}
+.application-wizard .step-indicator span:hover:not(.active) {
+  color: #0056b3; /* darker primary on hover */
+}
+
+/* Loading spinner for route transitions (if RouteLoader is used) */
+.route-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* General button styling - using Bootstrap defaults primarily, but can customize */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
